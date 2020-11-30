@@ -3,7 +3,7 @@ class CreateSeasons < ActiveRecord::Migration[6.0]
     create_table :seasons do |t|
       t.string :name
       t.string :description
-      t.references :Schedule, null: false, foreign_key: true
+      t.references :schedule, null: false, foreign_key: true
 
       t.timestamps
     end

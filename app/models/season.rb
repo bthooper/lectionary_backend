@@ -1,3 +1,4 @@
 class Season < ApplicationRecord
-  belongs_to :Schedule
+  belongs_to :schedule
+  has_many :days
 end

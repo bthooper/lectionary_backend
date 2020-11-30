@@ -9,7 +9,7 @@ class CreateReadings < ActiveRecord::Migration[6.0]
       t.string :endChapter
       t.string :startVerse
       t.string :endVerse
-      t.references :Day, null: false, foreign_key: true
+      t.references :day, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -3,7 +3,7 @@ class CreateSchedules < ActiveRecord::Migration[6.0]
     create_table :schedules do |t|
       t.string :name
       t.string :description
-      t.references :Lectionary, null: false, foreign_key: true
+      t.references :lectionary, null: false, foreign_key: true
 
       t.timestamps
     end

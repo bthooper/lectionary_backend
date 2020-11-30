@@ -1,3 +1,3 @@
 class Reading < ApplicationRecord
-  belongs_to :Day
+  belongs_to :day
 end

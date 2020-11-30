@@ -5,7 +5,7 @@ class CreateDays < ActiveRecord::Migration[6.0]
       t.string :description
       t.string :startDate
       t.string :endDate
-      t.references :Season, null: false, foreign_key: true
+      t.references :season, null: false, foreign_key: true
 
       t.timestamps
     end

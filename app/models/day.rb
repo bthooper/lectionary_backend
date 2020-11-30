@@ -1,3 +1,4 @@
 class Day < ApplicationRecord
-  belongs_to :Season
+  belongs_to :season
+  has_many :readings
 end
