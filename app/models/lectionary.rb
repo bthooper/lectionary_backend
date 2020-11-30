@@ -1,0 +1,2 @@
+class Lectionary < ApplicationRecord
+end
