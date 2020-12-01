@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get '/days', to: 'days#index'
-  get '/days/:id', to: 'days#show'
+
+  resources :lectionaries, only: [:index, :show] do
+    resources :schedules, only: [:index, :show]
+  end
+
+
 end
