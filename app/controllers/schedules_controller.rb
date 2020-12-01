@@ -7,7 +7,7 @@ class SchedulesController < ApplicationController
 
   def show
     schedule = current_lectionary.schedules.find(params[:id])
-    render json: schedules
+    render json: schedule
   end
 
   private
