@@ -1,13 +1,13 @@
 class ReadingsController < ApplicationController
 
   def index
-    @readings = current_day.readings
-    render json: @readings 
+    readings = current_day.readings
+    render json: readings 
   end
 
   def show
-    @reading = current_day.readings.find(params[:id])
-    render json: @reading 
+    reading = current_day.readings.find(params[:id])
+    render json: reading 
   end
 
   private
