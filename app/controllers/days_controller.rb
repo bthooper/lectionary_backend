@@ -2,12 +2,12 @@ class DaysController < ApplicationController
 
   def index
     days = current_season.days
-    render json: days 
+    render json: DaySerializer.new(days)
   end
 
   def show
     day = current_season.days.find(params[:id])
-    render json: day 
+    render json: DaySerializer.new(day) 
   end
 
   private

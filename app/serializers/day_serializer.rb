@@ -1,4 +1,6 @@
 class DaySerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :name, :description, :startDate, :endDate
+  belongs_to :season
+  has_many :readings
 end

@@ -2,12 +2,12 @@ class SeasonsController < ApplicationController
 
   def index
     seasons = current_schedule.seasons
-    render json: seasons 
+    render json: SeasonSerializer.new(seasons) 
   end
 
   def show
     season = current_schedule.seasons.find(params[:id])
-    render json: season
+    render json: SeasonSerializer.new(season) 
   end
 
   private

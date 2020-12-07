@@ -2,12 +2,13 @@ class SchedulesController < ApplicationController
 
   def index
     schedules = current_lectionary.schedules 
-    render json: schedules 
+    render json: ScheduleSerializer.new(schedules) 
   end
 
   def show
     schedule = current_lectionary.schedules.find(params[:id])
-    render json: schedule
+    options = {include: [:seasons]}
+    render json: ScheduleSerializer.new(schedule) 
   end
 
   private

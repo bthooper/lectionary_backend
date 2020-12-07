@@ -7,8 +7,7 @@ class LectionariesController < ApplicationController
 
   def show
     lectionary = Lectionary.find(params[:id])
-    options = {include: [:schedules]}
-    render json: LectionarySerializer.new(lectionary, options)
+    render json: LectionarySerializer.new(lectionary)
   end
   
 end
