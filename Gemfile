@@ -22,6 +22,9 @@ gem 'puma', '~> 4.1'
 # Use Fast JSON for API
 gem 'fast_jsonapi'
 
+# Add CORS support
+gem 'rack-cors', :require => 'rack/cors'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
