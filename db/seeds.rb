@@ -7,8 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 
-puts "Creating Revised Common Lectionary."
+puts "Creating Lectionaries."
+Lectionary.create(name: 'Open Lectionary', description: '', owner: 'Consultation on Common Texts, Augsburg Fortress Publishers', license: 'Copyright 2005' )
+Lectionary.create(name: 'Orthodox Lectionary', description: '', owner: 'Consultation on Common Texts, Augsburg Fortress Publishers', license: 'Copyright 2005' )
 lectionary = Lectionary.create(name: 'Revised Common Lectionary', description: '', owner: 'Consultation on Common Texts, Augsburg Fortress Publishers', license: 'Copyright 2005' )
+puts 'Finished creating ${lectionary.name}'
 
 puts "Creating schedules."
 schedules = lectionary.schedules.create([{name: "Year A", description: "Year A of the Revised Common Lectionary"},

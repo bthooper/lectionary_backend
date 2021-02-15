@@ -14,7 +14,7 @@ class SchedulesController < ApplicationController
   private
 
   def current_lectionary
-    Lectionary.find_by(params[:lectionary_id])
+    Lectionary.find_by(id: params[:lectionary_id])
   end
   
 end
