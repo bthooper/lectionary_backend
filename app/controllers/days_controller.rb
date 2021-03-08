@@ -13,7 +13,7 @@ class DaysController < ApplicationController
   private
 
   def current_season
-    Season.find_by(params[:season_id])
+    Season.find_by(id: params[:season_id])
   end
   
 end

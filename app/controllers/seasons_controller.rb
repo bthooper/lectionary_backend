@@ -13,7 +13,7 @@ class SeasonsController < ApplicationController
   private
 
   def current_schedule
-    Schedule.find_by(params[:schedule_id])
+    Schedule.find_by(id: params[:schedule_id])
   end
   
 end
