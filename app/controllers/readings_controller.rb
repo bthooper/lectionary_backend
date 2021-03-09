@@ -13,7 +13,7 @@ class ReadingsController < ApplicationController
   private
 
   def current_day
-    Day.find_by(params[:day_id])
+    Day.find_by(id: params[:day_id])
   end
   
 end

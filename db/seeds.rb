@@ -8,8 +8,6 @@
 #
 
 puts "Creating Lectionaries."
-Lectionary.create(name: 'Open Lectionary', description: '', owner: 'Consultation on Common Texts, Augsburg Fortress Publishers', license: 'Copyright 2005' )
-Lectionary.create(name: 'Orthodox Lectionary', description: '', owner: 'Consultation on Common Texts, Augsburg Fortress Publishers', license: 'Copyright 2005' )
 lectionary = Lectionary.create(name: 'Revised Common Lectionary', description: '', owner: 'Consultation on Common Texts, Augsburg Fortress Publishers', license: 'Copyright 2005' )
 puts 'Finished creating ${lectionary.name}'
 
@@ -27,15 +25,14 @@ schedules.each do |schedule|
                            {name: "Holy Week"}, 
                            {name: "Easter"}, 
                            {name: "Season After Pentecost"}])
-end
-
-puts "Creating Advent Days"
-
-season = Season.find_by(name: "Advent")
-season.days.create([{name: "First Sunday of Advent"},
+  season = schedule.seasons.find_by(name: "Advent")
+  season.days.create([{name: "First Sunday of Advent"},
                     {name: "Second Sunday of Advent"},
                     {name: "Third Sunday of Advent"},
                     {name: "Fourth Sunday of Advent"}])
+end
+
+puts "Creating Advent Days"
 
 day = Day.find_by(name: "First Sunday of Advent")
 day.readings.create([{reference: 'Isaiah 2: 1-5', reading_type: 'First Reading'},
