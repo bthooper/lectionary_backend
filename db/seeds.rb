@@ -386,4 +386,12 @@ day.readings.create([{reference: '1 Samuel 2:1-10', reading_type: 'First Reading
                      {reference: 'Psalm 113', reading_type: 'Psalm'},
                      {reference: 'Romans 12:9-16b', reading_type: 'Second Reading'},
                      {reference: 'Luke 1:39-57', reading_type: 'Gospel'}])
-puts "Seeding done."
+
+puts "Seeding some initial notes"
+Note.create({title: "An interesting note", content: "This is a very interesting note on a fascinating topic."})
+Note.create({title: "Think about this.", content: "This is a very interesting note on a fascinating topic."})
+Note.create({title: "I wonder if this could be the case", content: "This is a very interesting note on a fascinating topic."})
+Note.create({title: "Genesis is long", content: "This is a very interesting note on a fascinating topic."})
+Note.create({title: "Numbers is longer", content: "This is a very interesting note on a fascinating topic."})
+Note.create({title: "Goodness vs. Badness", content: "This is a very interesting note on a fascinating topic."})
+

@@ -11,5 +11,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :notes, only: [:index, :show]
+
 
 end
