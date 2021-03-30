@@ -20,10 +20,20 @@ class NotesController < ApplicationController
     note.destroy
   end
 
+  def update
+    note = Note.find(params[:id])
+    note.update(update_params)
+    note.save
+  end
+
   private
 
   def note_params(*args)
     params.require(:data).require(:attributes).permit(*args)
+  end
+
+  def update_params
+    params.permit(:content, :title)
   end
 
 end
