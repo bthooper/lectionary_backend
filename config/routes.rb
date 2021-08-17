@@ -13,5 +13,7 @@ Rails.application.routes.draw do
 
   resources :notes, only: [:index, :show, :create, :destroy, :update]
 
+  resources :sessions, only: [:create]
+
 
 end
